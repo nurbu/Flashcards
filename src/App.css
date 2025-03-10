@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
-  color: red;
+  color: black;
 }
 .Main {
   text-align: center;
-  background-image: url('./imgs/earl-burns-miller-japanese-garden-california-state-university-long-beach-california-united-states-uhd-4k-wallpaper.jpg');
+  
+  background-image: none !important;
+  background-color: white !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid red;
+  border: solid black;
   height: 30vh;
   width: auto;
   box-shadow: 2.7px 5.4px 5.4px hsl(0deg 0% 0% / 0.42);
@@ -33,7 +35,7 @@
 .mbody{
   
   padding: 0%;
-  border: solid purple;
+  border: solid black;
   height: 60vh;
   width: auto;
   display: flex;
