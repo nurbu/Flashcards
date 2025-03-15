@@ -2,7 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import Cardtext from './component/Card'
-import Checker from './component/Checker'
+import {bio} from "./data"
+
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -14,8 +15,7 @@ const App = () => {
   const sub = () => setCount(prevCount => (prevCount-1===-1 ? 9: prevCount-1));
   const ans = () => setAnswer(prevCount)
   const cans = (event) => setAnswer(event.target.value);
-  const cc = (response) => setCcc(response);
-  let che = answer === ccc ? true : false
+  const checkanswer = () => setCcc(answer === bio[count].answer ? "Correct":"Wrong");
 
   return(
     <div className='Main'>
@@ -29,9 +29,9 @@ const App = () => {
         <h3>Guess the answer</h3>
         <input type="text" value = {answer} onChange={cans}/>
         <h3>You typed: {answer}</h3>
-        <button onClick={() => cc(<Cardtext qnum={count} qora="flase"/>)}>Submit Guess</button>
-        <Checker check={che}/>
+        <button onClick={checkanswer}>Submit Guess</button>
         <div>
+        <div>{ccc}</div>
         <button onClick={sub}>⬅</button>
         <button onClick={add}>➡</button>
       </div>
